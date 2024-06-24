@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../../globals.css";
 import BibleHeaderbar from "@/components/shared/BibleHeaderbar";
+import { BibleBottombar } from "@/components/shared/BibleBottombar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,10 +14,15 @@ export default function RootLayout({
 }>) {
   return (
       <div>
-        <div className="bg-white pt-10">
+        {/* add motion divs to Header and Bottom */}
+        {/* <div className="bg-white">
             <BibleHeaderbar />
-        </div>
+        </div> */}
+        {/* children stay in middle container */}
+        <div className="pt-10 pb-20">
         {children}
+        </div>
+        {/* <BibleBottombar /> */}
         </div>
   );
 }
